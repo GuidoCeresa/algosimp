@@ -2,6 +2,18 @@ Plugin per importare dati
 Grails: 2.2.3
 
 Importa dati nel formato csv
+Read: http://www.grails.org/plugin/csv
+
+ This plugin adds two dynamic methods 'eachCsvLine' and 'toCsvReader' to each of the following classes:
+
+    java.lang.String
+    java.io.File
+    java.io.InputStream
+    java.io.Reader
+
+"hello, world, how, are, you".eachCsvLine { tokens ->
+    //only one line in this case and tokens.length == 5
+}
 
 DataBase: utilizza il DB dell'applicazione finale (esclusi dal JAR)
 Views: utilizza i propri templates per creare i file .gsp
